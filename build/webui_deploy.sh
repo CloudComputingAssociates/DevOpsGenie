@@ -4,9 +4,14 @@ message="Env vars... "
 echo $message
 
 DEV="/home/dev/webs/dog"  # dog == DevOps Genie
-WEBUI = ${DEV}+"/webui"
-message="DEV: "
-message+=$DEV
+
+
+# DevOpsGenie WebUI
+
+WEBUI = "/home/dev/webs/dog/webui"
+
+message="WEBUI: "
+message+= WEBUI
 echo $message
 
 JENKINS_HOME="/var/lib/jenkins"
@@ -16,15 +21,12 @@ echo $message
 
 # nuke everything under DEV
 echo "Nuke everything ... but not node_modules"
-rm -rfv $DEV
-
-# DevOpsGenie WebUI
+rm -rfv $WEBUI
 
 message="Moving WebUI ..."
 echo $message
 
 # create dir(s)
-mkdir ${DEV}
 mkdir ${WEBUI}
 mkdir ${WEBUI}/src
 
