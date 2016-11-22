@@ -34,12 +34,12 @@ mkdir ${WEBUI}/src
 cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/src/*.* ${WEBUI}/src
 
 # move files
-cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.css ${WEBUI}/*.*
-cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.js ${WEBUI}/*.*
-cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.html ${WEBUI}/*.*
-cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.json ${WEBUI}/*.*
-cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/packages.config ${WEBUI}/*.*
-cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.css ${WEBUI}/*.*
+cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.css ${WEBUI}
+cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.js ${WEBUI}
+cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.html ${WEBUI}
+cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.json ${WEBUI}
+cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/packages.config ${WEBUI}
+cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.css ${WEBUI}
 
 
 echo "done."
