@@ -8,7 +8,7 @@ DEV="/home/dev/webs/dog"  # dog == DevOps Genie
 
 # DevOpsGenie WebUI
 
-WEBUI = "/home/dev/webs/dog/webui"
+WEBUI="/home/dev/webs/dog/webui"
 
 message="WEBUI: "
 message+= WEBUI
