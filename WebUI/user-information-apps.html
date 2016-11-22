@@ -1,0 +1,21 @@
+<h1>
+	<b>
+		<font color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cloud Servers</font>
+	</b>
+</h1>
+	
+       <table border="1">
+			<tr>
+				  <th style="background-color: #4CAF50;">Server</th>
+			</tr>
+
+			<tr *ngFor="let s of servers">
+				    
+				  <td><span>{{s.Name}}</span></td>
+
+			</tr>				
+		</table>
+
+		<div>
+      <button (click)="onClick()" id="btnUserDetails">Call REST API</button>
+    </div>
