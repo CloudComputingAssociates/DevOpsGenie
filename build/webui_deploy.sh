@@ -1,9 +1,10 @@
-#!/bin/bash   DevOpsGenie webui deploy
+#!/bin/bash
 # env vars
 message="Env vars... "
 echo $message
 
-DEV="/home/dev/webs/dog/webui"  # dog == DevOps Genie
+DEV="/home/dev/webs/dog"  # dog == DevOps Genie
+WEBUI = ${DEV}+"/webui"
 message="DEV: "
 message+=$DEV
 echo $message
@@ -16,8 +17,6 @@ echo $message
 # nuke everything under DEV
 echo "Nuke everything ... but not node_modules"
 rm -rfv $DEV
-# re-create dev/webs dir
-mkdir $DEV
 
 # DevOpsGenie WebUI
 
@@ -26,18 +25,19 @@ echo $message
 
 # create dir(s)
 mkdir $DEV
-mkdir $DEV/src
+mkdir $WEBUI
+mkdir $WEBUI/src
 
 # move src
-cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/src/*.* ${DEV}/WebUI/src
+cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/src/*.* ${WEBUI}/src
 
 # move files
-cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.css ${DEV}/*.*
-cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.js ${DEV}/*.*
-cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.html ${DEV}/*.*
-cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.json ${DEV}/*.*
-cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/packages.config ${DEV}/*.*
-cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.css ${DEV}/*.*
+cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.css ${WEBUI}/*.*
+cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.js ${WEBUI}/*.*
+cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.html ${WEBUI}/*.*
+cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.json ${WEBUI}/*.*
+cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/packages.config ${WEBUI}/*.*
+cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.css ${WEBUI}/*.*
 
 
 echo "done."
