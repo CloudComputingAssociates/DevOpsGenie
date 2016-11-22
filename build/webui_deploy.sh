@@ -24,9 +24,9 @@ message="Moving WebUI ..."
 echo $message
 
 # create dir(s)
-mkdir $DEV
-mkdir $WEBUI
-mkdir $WEBUI/src
+mkdir ${DEV}
+mkdir ${WEBUI}
+mkdir ${WEBUI}/src
 
 # move src
 cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/src/*.* ${WEBUI}/src
