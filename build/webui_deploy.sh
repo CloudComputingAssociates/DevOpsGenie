@@ -20,15 +20,13 @@ message+=$JENKINS_HOME
 echo $message
 
 # nuke everything under DEV
-echo "Nuke everything ... but not node_modules"
-rm -rfv $WEBUI
+echo "Nuke files, leave dirs ... but not node_modules dirs or files"
+rm $WEBUI/*.*
+rm $WEBUI/src/*.*
 
 message="Moving WebUI ..."
 echo $message
 
-# create dir(s)
-mkdir ${WEBUI}
-mkdir ${WEBUI}/src
 
 # move src
 cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/src/*.* ${WEBUI}/src
