@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOGService", "DOGService\DOGService.csproj", "{E0FD6653-963C-4FDE-AE78-EADF2AC59AD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOGService", "RestAPI\DOGService\DOGService.csproj", "{E0FD6653-963C-4FDE-AE78-EADF2AC59AD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOGService.Tests", "DOGService.Tests\DOGService.Tests.csproj", "{33F3C562-AC8C-4101-AD6A-D258C4007807}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOGService.Tests", "RestAPI\DOGService.Tests\DOGService.Tests.csproj", "{33F3C562-AC8C-4101-AD6A-D258C4007807}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureLib", "AzureLib\AzureLib.csproj", "{52DEA0FB-04C1-4261-A257-8B7DCAAB351A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureLib", "RestAPI\AzureLib\AzureLib.csproj", "{52DEA0FB-04C1-4261-A257-8B7DCAAB351A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureLib.Tests", "AzureLib.Tests\AzureLib.Tests.csproj", "{07771AB6-6964-4208-BB04-620F888F8B55}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureLib.Tests", "RestAPI\AzureLib.Tests\AzureLib.Tests.csproj", "{07771AB6-6964-4208-BB04-620F888F8B55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

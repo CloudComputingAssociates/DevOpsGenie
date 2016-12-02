@@ -21,13 +21,9 @@ namespace DOGService.Tests.Controllers
             ValuesController controller = new ValuesController();
 
             // Act
-            JsonResult<object> result = controller.Get();
+            ComputeInstance[] result = (ComputeInstance[])controller.Get();
 
-            // Assert
-            //Assert.IsNotNull(result);
-            //Assert.AreEqual(2, result.Count());
-            //Assert.AreEqual("Ubuntu2", result.ElementAt(0));
-            //Assert.AreEqual("WindowsServer1", result.ElementAt(1));
+            Assert.IsTrue(result.Length > 0);
         }
 
         [TestMethod]
