@@ -5,15 +5,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace AzureLib.Tests
 {
     [TestClass]
-    public class ComputeInstanceTests
+    public class AzureLibTests
     {
         
         [TestMethod]
         public void GetSubscriptionsTest()
         {
             Subscription sub = new Subscription();
-            string json = sub.GetSubscriptions();
-            Assert.IsNotNull(json);
+            string subscr = sub.GetSubscription();
+            Assert.IsNotNull(subscr);
         }
         [TestMethod]
         public void GetVirtualMachinesTest()
