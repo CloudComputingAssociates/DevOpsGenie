@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 using RestSharp;
 using RestSharp.Authenticators;
 using Newtonsoft.Json.Linq;
+using Ninject;
 
 namespace AzureLib
 {
-    public class Subscription
+    public class Subscription : ISubscription
     {
         string _accessToken;
-        public Subscription()
+        public Subscription(IAuth auth)
         {
-            _accessToken = new Auth().GetAcessToken();
+            _accessToken = auth.GetAcessToken();
         }
-        public string GetSubscription()
+        public string GetSubscriptionId()
         {
             var client = new RestClient("https://management.azure.com/subscriptions");
 

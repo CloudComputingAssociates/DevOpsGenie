@@ -23,9 +23,16 @@ namespace DOGService
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                name: "AzureApiResourceGroups",
+                routeTemplate: "api/azure/resourcegroups/{id}",
                 defaults: new { id = RouteParameter.Optional }
+
+            );
+            config.Routes.MapHttpRoute(
+                name: "AzureApiComputeInstances",
+                routeTemplate: "api/azure/computeinstances/{id}",
+                defaults: new { id = RouteParameter.Optional }
+
             );
         }
     }

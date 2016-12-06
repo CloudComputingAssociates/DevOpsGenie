@@ -18,7 +18,7 @@ namespace AzureLib
         public string resource { get; set; }
         public string access_token { get; set; }
     }
-    public class Auth
+    public class Auth : IAuth
     {
         string _tenantId = string.Empty;            // private member vars
         string _clientId = string.Empty;
@@ -41,7 +41,7 @@ namespace AzureLib
             // alternatively you can use the name of the tenancy/account as below
             //_azureOAuth2URL = "https://login.microsoftonline.com/martyyoueatinghealthy.onmicrosoft.com/oauth2/token";  
         }
-        public string GetEndpointURL()
+        private string GetEndpointURL()
         {
             return _azureAuthURL;
         }

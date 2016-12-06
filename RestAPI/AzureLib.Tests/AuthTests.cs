@@ -13,11 +13,6 @@ namespace AzureLib.Tests
             _auth = new Auth(); 
         }
         [TestMethod]
-        public void GetEndpointURLTest()
-        {
-            Assert.IsTrue(_auth.GetEndpointURL().Contains("/oauth2/token"));
-        }
-        [TestMethod]
         public void GetAccessTokenTest()
         {
             Assert.AreNotEqual(string.Empty, _auth.GetAcessToken());
