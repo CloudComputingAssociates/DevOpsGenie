@@ -24,9 +24,16 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="app.css" />
+    <Content Include="css\grayscale.css" />
+    <Content Include="css\grayscale.min.css" />
+    <Content Include="img\downloads-bg.jpg" />
+    <Content Include="img\intro-bg.jpg" />
+    <Content Include="img\map-marker.png" />
     <Content Include="index.html" />
     <Content Include="gulpfile.js" />
     <Content Include="index-bak.html" />
+    <Content Include="js\grayscale.js" />
+    <Content Include="js\grayscale.min.js" />
     <Content Include="user-information-apps.html" />
     <Content Include="web.config" />
   </ItemGroup>
@@ -39,6 +46,12 @@
     <Content Include="grayscale-package.json" />
     <Content Include="LICENSE" />
     <Content Include="README.md" />
+    <Content Include="less\grayscale.less" />
+    <Content Include="less\mixins.less" />
+    <Content Include="less\variables.less" />
+    <Content Include="sass\grayscale.scss" />
+    <Content Include="sass\_mixins.scss" />
+    <Content Include="sass\_variables.scss" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -47,11 +60,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="css\" />
-    <Folder Include="img\" />
-    <Folder Include="js\" />
-    <Folder Include="less\" />
-    <Folder Include="sass\" />
     <Folder Include="vendor\" />
   </ItemGroup>
   <PropertyGroup>
