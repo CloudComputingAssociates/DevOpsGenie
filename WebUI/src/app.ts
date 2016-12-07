@@ -28,7 +28,7 @@ export class App {
 // Annotation section
 @Component({
   selector: 'user-selector',
-  templateUrl: 'user-information-apps.html'
+  templateUrl: 'resource-groups.html'
 })
 
 // Component controller
