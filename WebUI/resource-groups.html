@@ -2,19 +2,18 @@
 ng-2 component
 </h3>
 	
-       <table border="1" bordercolor="white" >
-			<tr>
-				  Resource Groups
-			</tr>
-
-			<tr *ngFor="let rg of resourcegroups">
-				    
-				  <td><span>{{rg.resourcegroup}}</span></td>
-
-			</tr>				
-		</table>
-
 		<div>
-      <p>
-      <button class="btn btn-default btn-lg" (click)="onClick()" id="btnUserDetails">CALL REST API</button>
-    </div>
+            <button class="btn btn-default btn-lg" (click)="onClick()" id="btnUserDetails">CALL REST API</button>
+            <p>
+        </div>
+        <div>
+            <table border="1" bordercolor="white">
+                <tr>
+                    Resource Groups
+                </tr>
+                <tr *ngFor="let rg of resourcegroups">
+
+                    <td><span>{{rg.resourcegroup}}</span></td>
+                </tr>
+            </table>
+        </div>
