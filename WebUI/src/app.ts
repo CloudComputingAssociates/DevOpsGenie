@@ -6,6 +6,8 @@ import {
   Http, 
   Response
 } from '@angular/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 import { Observable } from 'rxjs';
 
@@ -49,8 +51,9 @@ onClick(){
 
 @NgModule({
   imports: [ 
-    BrowserModule, 
-    HttpModule 
+        BrowserModule, 
+        HttpModule,
+        NgbModule.forRoot()
   ],
   declarations: [ App,UserInformation ],
   bootstrap: [ App ]
