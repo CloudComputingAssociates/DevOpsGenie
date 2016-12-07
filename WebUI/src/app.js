@@ -19,7 +19,7 @@ var App = (function () {
     }
     App = __decorate([
         core_1.Component({
-            selector: 'my-app',
+            selector: 'res-group-app',
             template: "\n    <div style=\"width: 50%; margin: 0 auto;\">     \n      <user-selector></user-selector>\n    </div>\n  ",
         }), 
         __metadata('design:paramtypes', [])

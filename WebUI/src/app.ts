@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
 
 // Annotation section
 @Component({
-  selector: 'my-app',
+  selector: 'res-group-app',
   template: `
     <div style="width: 50%; margin: 0 auto;">     
       <user-selector></user-selector>
