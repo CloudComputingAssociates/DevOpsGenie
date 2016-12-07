@@ -32,17 +32,17 @@ export class App {
 // Component controller
 export class UserInformation {
 
-  servers:Observable<Array<any>>;
+  resourcegroups:Observable<Array<any>>;
   url: string;
 
   constructor(private _http: Http) {  
-      this.url ='http://dogservice.azurewebsites.net/api/values';
+      this.url ='http://dogservice.azurewebsites.net/api/azure/resourcegroups';
   } //end constructor 
 
 onClick(){	
 	this._http.get(this.url)
           .subscribe((res: Response) => {
-             this.servers = res.json();
+              this.resourcegroups = res.json();
           }); 
     } 
 }

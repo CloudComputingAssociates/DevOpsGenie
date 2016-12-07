@@ -6,58 +6,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 //our root app component
-var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var http_1 = require('@angular/http');
+var core_1 = require("@angular/core");
+var platform_browser_1 = require("@angular/platform-browser");
+var http_1 = require("@angular/http");
 // Annotation section
 var App = (function () {
     function App() {
     }
-    App = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n    <div style=\"width: 50%; margin: 0 auto;\">     \n      <user-selector></user-selector>\n    </div>\n  ",
-        })
-    ], App);
     return App;
 }());
+App = __decorate([
+    core_1.Component({
+        selector: 'my-app',
+        template: "\n    <div style=\"width: 50%; margin: 0 auto;\">     \n      <user-selector></user-selector>\n    </div>\n  ",
+    })
+], App);
 exports.App = App;
 // Annotation section
 var UserInformation = (function () {
     function UserInformation(_http) {
-        this._http = _http;
-        this.url = 'http://dogservice.azurewebsites.net/api/values';
+        this.url = 'http://dogservice.azurewebsites.net/api/azure/resourcegroups';
     } //end constructor 
     UserInformation.prototype.onClick = function () {
         var _this = this;
         this._http.get(this.url)
-            .subscribe(function (res) {
-            _this.servers = res.json();
+            .subscribe(function (res: Response) {
+            _this.resourcegroups = res.json();
         });
     };
-    UserInformation = __decorate([
-        core_1.Component({
-            selector: 'user-selector',
-            templateUrl: 'user-information-apps.html'
-        })
-    ], UserInformation);
     return UserInformation;
 }());
+UserInformation = __decorate([
+    core_1.Component({
+        selector: 'user-selector',
+        templateUrl: 'user-information-apps.html'
+    })
+], UserInformation);
 exports.UserInformation = UserInformation;
 var AppModule = (function () {
     function AppModule() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                platform_browser_1.BrowserModule,
-                http_1.HttpModule
-            ],
-            declarations: [App, UserInformation],
-            bootstrap: [App]
-        })
-    ], AppModule);
     return AppModule;
 }());
+AppModule = __decorate([
+    core_1.NgModule({
+        imports: [
+            platform_browser_1.BrowserModule,
+            http_1.HttpModule
+        ],
+        declarations: [App, UserInformation],
+        bootstrap: [App]
+    })
+], AppModule);
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.js.map

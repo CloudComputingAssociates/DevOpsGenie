@@ -1,17 +1,17 @@
 <h1>
 	<b>
-		<font color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compute Instances found</font>
+		<font color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compute Instances Finder</font>
 	</b>
 </h1>
 	
        <table border="1">
 			<tr>
-				  <th style="background-color: #4CAF50;">Server</th>
+				  <th style="background-color: #4CAF50;">Azure Resource Groups</th>
 			</tr>
 
-			<tr *ngFor="let s of servers">
+			<tr *ngFor="let rg of resourcegroups">
 				    
-				  <td><span>{{s.Name}}</span></td>
+				  <td><span>{{rg.resourcegroup}}</span></td>
 
 			</tr>				
 		</table>
