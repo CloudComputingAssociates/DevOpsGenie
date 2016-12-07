@@ -23,7 +23,7 @@ namespace AzureLib.Tests
         [TestMethod]
         public void GetResourceGroupNamesTest()
         {
-            List<KeyValuePair<string,string>> names = _resourceGroup.GetResourceGroupNames();
+            List<SimpleNamedString> names = _resourceGroup.GetResourceGroupNames();
             Assert.IsTrue(names.Count > 0);
         }
         [TestMethod]

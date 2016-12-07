@@ -22,7 +22,7 @@ namespace AzureLib
             _subscriptionId = subscription.GetSubscriptionId();
         }
 
-        public List<KeyValuePair<string, string>> GetResourceGroupNames()
+        public List<SimpleNamedString> GetResourceGroupNames()
         {
             string[] names = { "", "" };
             var client = new RestClient("https://management.azure.com/subscriptions/" + _subscriptionId + "/resourcegroups");
@@ -40,9 +40,9 @@ namespace AzureLib
 
             JObject jobj = JObject.Parse(response.Content); // get back JSON from Azure
 
-            List<KeyValuePair<string,string>> resourceGroupNames = (from rg in jobj["value"]         // stuff just those Resource Group names into a list of objects that can be json serialized
-                                               select new KeyValuePair<string, string>("resourcegroup", (string)rg["name"]))
-                                                .ToList<KeyValuePair<string,string>>();     
+            List<SimpleNamedString> resourceGroupNames = (from rg in jobj["value"]         // stuff just those Resource Group names into a list of objects that can be json serialized
+                                               select new SimpleNamedString("resourcegroup", (string)rg["name"]))
+                                                .ToList<SimpleNamedString>();     
 
             return resourceGroupNames;
         }

@@ -9,9 +9,16 @@ using DOGService;
 using DOGService.Controllers;
 using System.Web.Http.Results;
 using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
 namespace DOGService.Tests.Controllers
 {
+
+    public class ResourceClass 
+    {   
+        public string resourcegroup;
+    }
+
     [TestClass]
     public class AzureControllerTest
     {
@@ -24,8 +31,10 @@ namespace DOGService.Tests.Controllers
             // Act
             HttpResponseMessage response = controller.GetAllResourceGroups();
 
-           List<KeyValuePair<string,string>> responseList = JsonConvert.DeserializeObject<List<KeyValuePair<string,string>>>(response.Content.ReadAsStringAsync().Result);
-           Assert.IsTrue(responseList.Count == 2);
+            var definition = new { resourcegroup = "" };
+
+            List<ResourceClass> extracted= JsonConvert.DeserializeObject<List<ResourceClass>>(response.Content.ReadAsStringAsync().Result);
+            Assert.AreEqual(extracted[0].resourcegroup, "DOGService-resource-group");
         }
 
         //[TestMethod]
