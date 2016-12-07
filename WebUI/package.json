@@ -1,7 +1,8 @@
 {
-  "name": "angular-quickstart",
+  "name": "DevOps Genie",
   "version": "1.0.0",
-  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "description": "Angular UI and REST API framework for performing cloud management and provisioning",
+  "homepage": "http://dog.cloudcomputingassociates.com/dog/webui",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "docker-build": "docker build -t ng2-quickstart .",
@@ -17,11 +18,15 @@
     "webdriver:update": "webdriver-manager update"
   },
   "keywords": [],
-  "author": "",
+  "author": "Marty Mazurik",
   "licenses": [
     {
       "type": "MIT",
       "url": "https://github.com/angular/angular.io/blob/master/LICENSE"
+    },
+    {
+      "type": "MIT",
+      "url" : ""https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
     }
   ],
   "dependencies": {
@@ -40,7 +45,17 @@
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.12",
     "systemjs": "0.19.40",
-    "zone.js": "^0.6.26"
+    "zone.js": "^0.6.26",
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.13.0",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-header": "^1.8.7",
+    "gulp-less": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4",
+    "jquery": "^1.11.3"
   },
   "devDependencies": {
     "concurrently": "^3.1.0",

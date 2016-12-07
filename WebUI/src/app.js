@@ -9,6 +9,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
+var ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
 // Annotation section
 var App = (function () {
     function App() {
@@ -25,12 +26,13 @@ exports.App = App;
 // Annotation section
 var UserInformation = (function () {
     function UserInformation(_http) {
+        this._http = _http;
         this.url = 'http://dogservice.azurewebsites.net/api/azure/resourcegroups';
     } //end constructor 
     UserInformation.prototype.onClick = function () {
         var _this = this;
         this._http.get(this.url)
-            .subscribe(function (res: Response) {
+            .subscribe(function (res) {
             _this.resourcegroups = res.json();
         });
     };
@@ -52,7 +54,8 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [
             platform_browser_1.BrowserModule,
-            http_1.HttpModule
+            http_1.HttpModule,
+            ng_bootstrap_1.NgbModule.forRoot()
         ],
         declarations: [App, UserInformation],
         bootstrap: [App]

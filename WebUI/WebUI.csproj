@@ -22,8 +22,11 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="app.css" />
     <Content Include="index.html" />
+    <Content Include="gulpfile.js" />
+    <Content Include="index-bak.html" />
     <Content Include="user-information-apps.html" />
     <Content Include="web.config" />
   </ItemGroup>
@@ -33,12 +36,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="grayscale-package.json" />
+    <Content Include="LICENSE" />
+    <Content Include="README.md" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+    <Folder Include="img\" />
+    <Folder Include="js\" />
+    <Folder Include="less\" />
+    <Folder Include="sass\" />
+    <Folder Include="vendor\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
