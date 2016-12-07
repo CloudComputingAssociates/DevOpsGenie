@@ -20,18 +20,10 @@ message+=$JENKINS_HOME
 echo $message
 
 # nuke everything under DEV
-echo "Nuke files, leave dirs ... but not node_modules dirs or files"
+echo "clean out root web files"
 rm $WEBUI/*.*
-rm $WEBUI/src/*.*
 
-message="Moving WebUI ..."
-echo $message
-
-
-# move src
-cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/src/*.* ${WEBUI}/src
-
-# move files
+# move root web files
 cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.css ${WEBUI}
 cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.js ${WEBUI}
 cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.html ${WEBUI}
@@ -39,6 +31,15 @@ cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.json ${WEBUI}
 cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/packages.config ${WEBUI}
 cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/*.css ${WEBUI}
 
+# move src
+cp -TRv $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/src ${WEBUI}/src
 
+# move css, img, js, less, sass, vendor files from Greyscale Backbone template
+cp -TRv $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/css ${WEBUI}/css
+cp -TRv $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/img ${WEBUI}/img
+cp -TRv $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/js ${WEBUI}/js
+cp -TRv $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/less ${WEBUI}/less
+cp -TRv $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/sass ${WEBUI}/sass
+cp -TRv $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/vendor ${WEBUI}/vendor
 echo "done."
 
