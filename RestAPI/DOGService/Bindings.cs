@@ -14,6 +14,7 @@ namespace AzureLib
             Bind<IAuth>().To<Auth>();
             Bind<ISubscription>().To<Subscription>();
             Bind<IResourceGroup>().To<ResourceGroup>();
+            Bind<IRequest>().To<Request>();
         }
     }
 }

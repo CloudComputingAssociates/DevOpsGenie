@@ -75,6 +75,7 @@ namespace AzureLib
 
             return token;
         }
+
         private void ReadConfigFile()
         {
              _tenantId = ConfigurationManager.AppSettings["TenantId"].ToString();

@@ -13,37 +13,26 @@ namespace AzureLib
     public class ResourceGroup : IResourceGroup
     {
         string _subscriptionId = string.Empty;
-        string _accessToken;
-        // https://management.azure.com/subscriptions/9e2cfc4c-85b3-43a7-aa5c-a7ce38faacc3/resourcegroups   //   append /VMS-resource-group 
+        IRequest _request = null;
+
         [Inject]
-        public ResourceGroup(IAuth auth, ISubscription subscription)
+        public ResourceGroup(IRequest request, ISubscription subscription)
         {
-            _accessToken = auth.GetAcessToken();
+            _request = request;
             _subscriptionId = subscription.GetSubscriptionId();
         }
 
         public List<SimpleNamedString> GetResourceGroupNames()
         {
-            string[] names = { "", "" };
-            var client = new RestClient("https://management.azure.com/subscriptions/" + _subscriptionId + "/resourcegroups");
+            Uri url = new Uri("https://management.azure.com/subscriptions/" + _subscriptionId + "/resourcegroups");
 
-            RestRequest request = new RestRequest(Method.GET);
+            IRestResponse response = _request.Execute(Method.GET, url);
 
-            request.AddHeader("content-type", "application/json");
-            request.AddHeader("cache-control", "no-cache");
-            request.AddHeader("authorization", "bearer " + _accessToken);
+            JObject jobj = JObject.Parse(response.Content); 
 
-            request.AddParameter("api-version", "2016-06-01");
-
-
-            IRestResponse response = client.Execute(request);
-
-            JObject jobj = JObject.Parse(response.Content); // get back JSON from Azure
-
-            List<SimpleNamedString> resourceGroupNames = (from rg in jobj["value"]         // stuff just those Resource Group names into a list of objects that can be json serialized
+            List<SimpleNamedString> resourceGroupNames = (from rg in jobj["value"]         // stuff into list of serializable objects, SimpleNamedString
                                                select new SimpleNamedString("resourcegroup", (string)rg["name"]))
                                                 .ToList<SimpleNamedString>();     
-
             return resourceGroupNames;
         }
     }
