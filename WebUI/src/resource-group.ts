@@ -1,11 +1,30 @@
-﻿//res-group-component
+﻿//resource-group component
 import { Component } from '@angular/core';
-import { HttpModule, Http, Response } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 
 @Component({
     selector: 'resource-group',
-    templateUrl: 'resource-group.html'
+    template: `<h3>
+Resource Group ng2 component
+    < /h3>
+
+    < div >
+    <button class="btn btn-default btn-lg"(click)="onClick()" id= "btnUserDetails" > CALL REST API< /button>
+    < p >
+    </div>
+    < div >
+    <table border="1" bordercolor= "white" >
+    <tr>
+    Resource Groups
+        </tr >
+    <tr *ngFor="let rg of resourcegroups" >
+
+    <td><span>{{rg.resourcegroup }}</span></td>
+    </tr>
+    < /table>
+    </div>
+`
 })
 // Component controller
 export class ResourceGroupComponent {

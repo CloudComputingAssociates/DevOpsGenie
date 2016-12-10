@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-//res-group-component
+//resource-group component
 const core_1 = require('@angular/core');
 const http_1 = require('@angular/http');
 let ResourceGroupComponent = class ResourceGroupComponent {
@@ -26,7 +26,26 @@ let ResourceGroupComponent = class ResourceGroupComponent {
 ResourceGroupComponent = __decorate([
     core_1.Component({
         selector: 'resource-group',
-        templateUrl: 'resource-group.html'
+        template: `<h3>
+Resource Group ng2 component
+    < /h3>
+
+    < div >
+    <button class="btn btn-default btn-lg"(click)="onClick()" id= "btnUserDetails" > CALL REST API< /button>
+    < p >
+    </div>
+    < div >
+    <table border="1" bordercolor= "white" >
+    <tr>
+    Resource Groups
+        </tr >
+    <tr *ngFor="let rg of resourcegroups" >
+
+    <td><span>{{rg.resourcegroup }}</span></td>
+    </tr>
+    < /table>
+    </div>
+`
     }), 
     __metadata('design:paramtypes', [http_1.Http])
 ], ResourceGroupComponent);
