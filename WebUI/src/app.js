@@ -9,6 +9,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap"); // ng bootstrap module
+var resource_group_1 = require("./resource-group");
 // Annotation section
 var App = (function () {
     function App() {
@@ -31,12 +32,11 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [
             platform_browser_1.BrowserModule,
-            HttpModule,
             ng_bootstrap_1.NgbModule.forRoot()
         ],
         declarations: [
             App,
-            ResourceGroupComponent
+            resource_group_1.ResourceGroupComponent
         ],
         bootstrap: [App]
     })

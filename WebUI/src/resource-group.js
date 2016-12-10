@@ -7,25 +7,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 //res-group-component
 var core_1 = require("@angular/core");
-var ResourceGroup = (function () {
-    function ResourceGroup(_http) {
+var ResourceGroupComponent = (function () {
+    function ResourceGroupComponent(_http) {
         this._http = _http;
         this.url = 'http://dogservice.azurewebsites.net/api/azure/resourcegroups';
     } //end constructor 
-    ResourceGroup.prototype.onClick = function () {
+    ResourceGroupComponent.prototype.onClick = function () {
         var _this = this;
         this._http.get(this.url) // getting the json back   TODO: should this be in a provider
             .subscribe(function (res) {
             _this.resourcegroups = res.json();
         });
     };
-    return ResourceGroup;
+    return ResourceGroupComponent;
 }());
-ResourceGroup = __decorate([
+ResourceGroupComponent = __decorate([
     core_1.Component({
         selector: 'resource-group',
         templateUrl: 'resource-group.html'
     })
-], ResourceGroup);
-exports.ResourceGroup = ResourceGroup;
+], ResourceGroupComponent);
+exports.ResourceGroupComponent = ResourceGroupComponent;
 //# sourceMappingURL=resource-group.js.map

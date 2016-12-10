@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
     templateUrl: 'resource-group.html'
 })
 // Component controller
-export class ResourceGroup {
+export class ResourceGroupComponent {
 
     resourcegroups: Observable<Array<any>>;
     url: string;
