@@ -26,7 +26,7 @@ let ResourceGroupComponent = class ResourceGroupComponent {
 ResourceGroupComponent = __decorate([
     core_1.Component({
         selector: 'resource-group',
-        templateUrl: './resource-group.html'
+        templateUrl: 'resource-group.html'
     }), 
     __metadata('design:paramtypes', [http_1.Http])
 ], ResourceGroupComponent);

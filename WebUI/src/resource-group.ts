@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 @Component({
     selector: 'resource-group',
-    templateUrl: './resource-group.html'
+    templateUrl: 'resource-group.html'
 })
 // Component controller
 export class ResourceGroupComponent {
