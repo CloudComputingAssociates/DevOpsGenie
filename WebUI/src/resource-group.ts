@@ -1,10 +1,9 @@
 ﻿//res-group-component
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
 import { HttpModule, Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 
 @Component({
-    moduleId: module.id,
     selector: 'resource-group',
     templateUrl: 'resource-group.html'
 })

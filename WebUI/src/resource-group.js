@@ -25,7 +25,6 @@ let ResourceGroupComponent = class ResourceGroupComponent {
 };
 ResourceGroupComponent = __decorate([
     core_1.Component({
-        moduleId: module.id,
         selector: 'resource-group',
         templateUrl: 'resource-group.html'
     }), 

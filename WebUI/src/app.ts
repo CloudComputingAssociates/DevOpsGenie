@@ -2,9 +2,9 @@
 import {Component, NgModule} from '@angular/core'
 import {BrowserModule} from '@angular/platform-browser'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';  // ng bootstrap module
-import { HttpModule } from '@angular/http'
+import { HttpModule } from '@angular/http';
 
-import { ResourceGroupComponent } from './resource-group'
+import { ResourceGroupComponent } from './resource-group';
 
 
 // Annotation section
