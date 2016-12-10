@@ -23,7 +23,8 @@ App = __decorate([
     core_1.Component({
         selector: 'app',
         template: `
-    <div style="width: 50%; margin: 0 auto;">     
+    <div style="width: 50%; margin: 0 auto;">   
+      <h2>App</h2>  
       <resource-group></resource-group>
     </div>
   `,
