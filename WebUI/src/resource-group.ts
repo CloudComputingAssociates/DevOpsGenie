@@ -4,6 +4,7 @@ import { HttpModule, Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 
 @Component({
+    moduleId: module.id,
     selector: 'resource-group',
     templateUrl: 'resource-group.html'
 })
