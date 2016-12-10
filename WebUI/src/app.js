@@ -19,7 +19,7 @@ var App = (function () {
 App = __decorate([
     core_1.Component({
         selector: 'app',
-        template: "\n    <div style=\"width: 50%; margin: 0 auto;\">     \n      <res-group-component></res-group-component>\n    </div>\n  ",
+        template: "\n    <div style=\"width: 50%; margin: 0 auto;\">     \n      <resource-group></resource-group>\n    </div>\n  ",
     })
 ], App);
 exports.App = App;

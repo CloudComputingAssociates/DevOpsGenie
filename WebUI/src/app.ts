@@ -11,7 +11,7 @@ import { ResourceGroupComponent } from './resource-group'
   selector: 'app',
   template: `
     <div style="width: 50%; margin: 0 auto;">     
-      <res-group-component></res-group-component>
+      <resource-group></resource-group>
     </div>
   `,  
 })
