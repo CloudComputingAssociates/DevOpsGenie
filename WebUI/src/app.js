@@ -24,8 +24,7 @@ App = __decorate([
         selector: 'app',
         template: `
     <div style="width: 50%; margin: 0 auto;">   
-      <h2>App</h2>  
-      <resource-group></resource-group>
+      <resource-group>Loading ...</resource-group>
     </div>
   `,
     }), 

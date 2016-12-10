@@ -1,6 +1,6 @@
 //our root app component
-import {Component, NgModule} from '@angular/core'
-import {BrowserModule} from '@angular/platform-browser'
+import { Component, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';  // ng bootstrap module
 import { HttpModule } from '@angular/http';
 
@@ -12,8 +12,7 @@ import { ResourceGroupComponent } from './resource-group';
   selector: 'app',
   template: `
     <div style="width: 50%; margin: 0 auto;">   
-      <h2>App</h2>  
-      <resource-group></resource-group>
+      <resource-group>Loading ...</resource-group>
     </div>
   `,  
 })
