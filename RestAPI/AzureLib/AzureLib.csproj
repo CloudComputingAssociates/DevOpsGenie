@@ -94,8 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Auth.cs" />
-    <Compile Include="ComputeInstance.cs" />
+    <Compile Include="Compute.cs" />
     <Compile Include="IAuth.cs" />
+    <Compile Include="ICompute.cs" />
     <Compile Include="IRequest.cs" />
     <Compile Include="IResourceGroup.cs" />
     <Compile Include="ISubscription.cs" />

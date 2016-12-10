@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using Ninject;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,14 @@ namespace AzureLib
     {
         IAuth _auth = null;
         Uri _uri = null;
+
+        [Inject]
         public Request(IAuth inAuth)     // ctor
         {
             _auth = inAuth;
         }
 
-        // this is specific Execute against Azure API, version 06/01/216 ... and subject to change with future Azure Resource Manager API releases
+        // this is specific Execute against Azure API, version 06/01/2016 ... and subject to change with future Azure Resource Manager API releases
         public IRestResponse Execute(Method method, Uri url)
         {
             var client = new RestClient(url);
@@ -27,7 +30,7 @@ namespace AzureLib
             request.AddHeader("cache-control", "no-cache");
             request.AddHeader("authorization", "bearer " + _auth.GetAcessToken());
 
-            request.AddParameter("api-version", "2016-06-01");
+            request.AddParameter("api-version", "2016-03-30");
 
             return client.Execute(request);
         }

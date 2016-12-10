@@ -33,7 +33,7 @@
     <Content Include="gulpfile.js" />
     <Content Include="js\grayscale.js" />
     <Content Include="js\grayscale.min.js" />
-    <Content Include="resource-groups.html" />
+    <Content Include="src\resource-group.html" />
     <Content Include="src\app.js" />
     <Content Include="src\main.js" />
     <Content Include="vendor\bootstrap\css\bootstrap.css" />
@@ -51,6 +51,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="src\app.ts" />
     <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\resource-group.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

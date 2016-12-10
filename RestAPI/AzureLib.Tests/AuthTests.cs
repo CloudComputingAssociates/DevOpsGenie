@@ -13,7 +13,7 @@ namespace AzureLib.Tests
             _auth = new Auth(); 
         }
         [TestMethod]
-        public void GetAccessTokenTest()
+        public void AuthGetAccessTokenTest()
         {
             Assert.AreNotEqual(string.Empty, _auth.GetAcessToken());
         }

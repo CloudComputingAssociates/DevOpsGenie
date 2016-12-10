@@ -9,7 +9,7 @@ namespace DOGService.Tests.Controllers
     public class HomeControllerTest
     {
         [TestMethod]
-        public void Index()
+        public void _ControllerHomeIndexTest()
         {
             // Arrange
             HomeController controller = new HomeController();

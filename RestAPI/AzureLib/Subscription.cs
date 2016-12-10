@@ -13,6 +13,8 @@ namespace AzureLib
     public class Subscription : ISubscription
     {
         IRequest _request;
+
+        [Inject]
         public Subscription(IRequest request)       // ninject request object
         {
             _request = request;

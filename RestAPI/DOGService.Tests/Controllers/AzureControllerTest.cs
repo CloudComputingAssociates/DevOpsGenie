@@ -23,7 +23,7 @@ namespace DOGService.Tests.Controllers
     public class AzureControllerTest
     {
         [TestMethod]
-        public void APIGetAllResourceGroups()
+        public void _ControllerAzureGetAllResourceGroupsTest()
         {
             // Arrange
             AzureController controller = new AzureController();

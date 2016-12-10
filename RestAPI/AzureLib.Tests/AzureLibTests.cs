@@ -9,36 +9,33 @@ namespace AzureLib.Tests
     [TestClass]
     public class AzureLibTests
     {
-        IResourceGroup _resourceGroup;
-        ISubscription _subscription;
-
+        StandardKernel _kernel = null;
         [TestInitialize]
         public void init()
         {
-            var kernel = new StandardKernel();
-            kernel.Load(Assembly.GetExecutingAssembly());
-            _resourceGroup = kernel.Get<IResourceGroup>();
-            _subscription = kernel.Get<ISubscription>();
+            _kernel = new StandardKernel();
+            _kernel.Load(Assembly.GetExecutingAssembly());
         }
         [TestMethod]
-        public void GetResourceGroupNamesTest()
+        public void ComputeGetVirtualMachinesTest()
         {
-            List<SimpleNamedString> names = _resourceGroup.GetResourceGroupNames();
+            ICompute compute = _kernel.Get<ICompute>();
+            List<SimpleNamedString> names = compute.GetVirtualMachines("VMS-resource-group");
+            Assert.AreEqual("Ubuntu2", names[0].value);
+        }
+        [TestMethod]
+        public void ResourceGroupGetResourceGroupNamesTest()
+        {
+            IResourceGroup resourceGroup = _kernel.Get<IResourceGroup>();
+            List<SimpleNamedString> names = resourceGroup.GetResourceGroupNames();
             Assert.IsTrue(names.Count > 0);
         }
         [TestMethod]
-        public void GetSubscriptionIdTest()
+        public void SubscriptionGetSubscriptionIdTest()
         {
-            string subscr = _subscription.GetSubscriptionId();
+            ISubscription subscription = _kernel.Get<ISubscription>();
+            string subscr = subscription.GetSubscriptionId();
             Assert.IsNotNull(subscr);
-        }
-        [TestMethod]
-        public void GetVirtualMachinesTest()
-        {
-            ComputeInstance ci = new ComputeInstance();
-
-            ci.GetVirtualMachines();
-            Assert.IsTrue(true);
         }
     }
 }
