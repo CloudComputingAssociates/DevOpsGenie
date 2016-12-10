@@ -2,6 +2,7 @@
 import {Component, NgModule} from '@angular/core'
 import {BrowserModule} from '@angular/platform-browser'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';  // ng bootstrap module
+import { HttpModule } from '@angular/http'
 
 import { ResourceGroupComponent } from './resource-group'
 
@@ -24,7 +25,8 @@ export class App {
 @NgModule({                             // root ng-module
   imports: [ 
         BrowserModule, 
-        NgbModule.forRoot()
+        NgbModule.forRoot(),
+        HttpModule
   ],
   declarations: [
       App,
