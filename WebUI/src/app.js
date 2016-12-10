@@ -14,7 +14,6 @@ const platform_browser_1 = require('@angular/platform-browser');
 const ng_bootstrap_1 = require('@ng-bootstrap/ng-bootstrap'); // ng bootstrap module
 const http_1 = require('@angular/http');
 const resource_group_1 = require('./resource-group');
-// Annotation section
 let App = class App {
     constructor() {
     }
