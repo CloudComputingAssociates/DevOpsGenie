@@ -5,8 +5,8 @@ import { Observable } from 'rxjs';
 
 @Component({
     selector: 'resource-group',
-    templateUrl:  'src/resource-group.html'
-})
+    templateUrl: './resource-group.html'
+})// Component controller
 export class ResourceGroupComponent {
 
     resourcegroups: Observable<Array<any>>;

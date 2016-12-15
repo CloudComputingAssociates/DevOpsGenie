@@ -17,7 +17,10 @@
     "tsc:w": "tsc -w",
     "webdriver:update": "webdriver-manager update"
   },
-  "keywords": [],
+  "keywords": [
+    "angular2",
+    "template"
+  ],
   "author": "Marty Mazurik",
   "licenses": [
     {
