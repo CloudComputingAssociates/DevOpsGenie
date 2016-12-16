@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 //resource-group component
-var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
 var ResourceGroupComponent = (function () {
     function ResourceGroupComponent(_http) {
         this._http = _http;
@@ -23,14 +23,15 @@ var ResourceGroupComponent = (function () {
             _this.resourcegroups = res.json();
         });
     };
-    ResourceGroupComponent = __decorate([
-        core_1.Component({
-            selector: 'resource-group',
-            templateUrl: './resource-group.html'
-        }), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], ResourceGroupComponent);
     return ResourceGroupComponent;
 }());
+ResourceGroupComponent = __decorate([
+    core_1.Component({
+        selector: 'resource-group',
+        templateUrl: './resource-group.html'
+    }) // Component controller
+    ,
+    __metadata("design:paramtypes", [http_1.Http])
+], ResourceGroupComponent);
 exports.ResourceGroupComponent = ResourceGroupComponent;
 //# sourceMappingURL=resource-group.js.map

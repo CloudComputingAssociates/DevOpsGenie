@@ -1,0 +1,8 @@
+/* res-list */
+#res-list { width:320px; font-family:Georgia, Times, serif; font-size:15px; }
+#res-list ul { list-style: none; }
+#res-list ul li { }
+#res-list ul li a { display:block; text-decoration:none; color:#000000; background-color:#FFFFFF; line-height:30px;
+  border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:#CCCCCC; padding-left:10px; cursor:pointer; }
+#res-list ul li a:hover { color:#FFFFFF; background-image:url(../images/hover.png); background-repeat:repeat-x; }
+#res-list ul li a strong { margin-right:10px; }
