@@ -27,7 +27,7 @@ rm $WEBUI/*.*
 cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/config.js ${WEBUI}
 cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/main.js ${WEBUI}
 cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/index.html ${WEBUI}
-cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/packages.config ${WEBUI}
+cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/package.json ${WEBUI}
 
 # move src
 cp $JENKINS_HOME/jobs/DevOpsGenie/workspace/WebUI/src/*.js ${WEBUI}/src
