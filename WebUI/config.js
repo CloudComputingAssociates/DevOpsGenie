@@ -1,6 +1,5 @@
 /**
- * System configuration for Angular samples
- * Adjust as necessary for your application needs.
+ * System configuration for Angular
  */
 (function (global) {
   System.config({
@@ -10,7 +9,7 @@
     },
     // map tells the System loader where to look for things
     map: {
-      // our app is within the src folder
+      // our NG2 app is within the src folder
       app: 'src',
 
       // angular bundles
@@ -33,7 +32,7 @@
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
       app: {
-        main: './main.js',
+        main: '../main.js',
         defaultExtension: 'js'
       },
       rxjs: {
